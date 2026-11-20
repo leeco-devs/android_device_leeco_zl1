@@ -36,7 +36,8 @@ TARGET_OTA_ASSERT_DEVICE := le_zl0,le_zl1,LEX720,LEX722,LEX727,zl0,zl1
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET     := 0x01000000
 
-TARGET_KERNEL_CONFIG := lineage_zl1_defconfig
+# msm-perf_defconfig plus the LeEco common and zl1 config fragments
+TARGET_KERNEL_ADDITIONAL_CONFIG := vendor/leeco/leeco_msm8996-common.conf vendor/leeco/leeco_zl1.conf
 
 # Partitions
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 58134835200
